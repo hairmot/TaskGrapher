@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SITSDEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="men_tec">
+          <Key>
+            <PropertyRef Name="tec_tktc" />
+            <PropertyRef Name="tec_ttes" />
+            <PropertyRef Name="tec_seq2" />
+          </Key>
+          <Property Name="tec_tktc" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="tec_ttes" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="tec_seq2" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tec_desc" Type="nvarchar" MaxLength="255" />
+          <Property Name="tec_step" Type="nvarchar" MaxLength="255" />
+          <Property Name="tec_iuse" Type="varchar" MaxLength="1" />
+          <Property Name="TEC_RANK" Type="numeric" Precision="5" Scale="0" />
+        </EntityType>
+        <EntityType Name="men_tkt">
+          <Key>
+            <PropertyRef Name="tkt_code" />
+          </Key>
+          <Property Name="tkt_code" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="tkt_snam" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="tkt_iuse" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_wght" Type="numeric" Precision="7" Scale="3" />
+          <Property Name="tkt_link" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_rpya" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_dela" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_mstc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tkt_from" Type="nvarchar" MaxLength="50" />
+          <Property Name="tkt_tref" Type="nvarchar" MaxLength="50" />
+          <Property Name="tkt_actn" Type="nvarchar" MaxLength="25" />
+          <Property Name="tkt_eref" Type="nvarchar" MaxLength="36" />
+          <Property Name="tkt_subj" Type="nvarchar" MaxLength="255" />
+          <Property Name="tkt_clup" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_stab" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_htvc" Type="nvarchar" MaxLength="6" />
+          <Property Name="tkt_audf" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_bart" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_mst1" Type="nvarchar" MaxLength="12" />
+          <Property Name="tkt_mst2" Type="nvarchar" MaxLength="12" />
+          <Property Name="tkt_cred" Type="datetime" />
+          <Property Name="tkt_updd" Type="datetime" />
+          <Property Name="tkt_udf1" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf2" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf3" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf4" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf5" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf6" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf7" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf8" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udf9" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfa" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfb" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfc" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfd" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfe" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udff" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfg" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfh" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfi" Type="nvarchar" MaxLength="15" />
+          <Property Name="tkt_udfj" Type="nvarchar" MaxLength="100" />
+          <Property Name="tkt_udfk" Type="nvarchar" MaxLength="100" />
+          <Property Name="tkt_mprd" Type="varchar" MaxLength="1" />
+          <Property Name="tkt_bar" Type="nvarchar(max)" />
+          <Property Name="tkt_text" Type="nvarchar(max)" />
+          <Property Name="tkt_htmo" Type="nvarchar(max)" />
+          <Property Name="tkt_htmc" Type="nvarchar(max)" />
+          <Property Name="tkt_html" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="men_tte">
+          <Key>
+            <PropertyRef Name="tte_tktc" />
+            <PropertyRef Name="tte_seq3" />
+          </Key>
+          <Property Name="tte_tktc" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="tte_seq3" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="tte_rank" Type="numeric" Precision="4" Scale="0" />
+          <Property Name="tte_step" Type="nvarchar" MaxLength="15" />
+          <Property Name="tte_page" Type="nvarchar" MaxLength="25" />
+          <Property Name="tte_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="tte_desc" Type="nvarchar" MaxLength="255" />
+          <Property Name="tte_iuse" Type="varchar" MaxLength="1" />
+          <Property Name="tte_ctrl" Type="varchar" MaxLength="1" />
+          <Property Name="tte_link" Type="varchar" MaxLength="1" />
+          <Property Name="tte_prbb" Type="varchar" MaxLength="1" />
+          <Property Name="tte_disp" Type="varchar" MaxLength="1" />
+          <Property Name="tte_type" Type="varchar" MaxLength="3" />
+          <Property Name="tte_slgc" Type="varchar" MaxLength="12" />
+          <Property Name="tte_srlc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tte_conc" Type="nvarchar" MaxLength="16" />
+          <Property Name="tte_cops" Type="nvarchar" MaxLength="3" />
+          <Property Name="tte_pogc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tte_podc" Type="nvarchar" MaxLength="16" />
+          <Property Name="tte_ttuc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tte_prac" Type="varchar" MaxLength="16" />
+          <Property Name="tte_oper" Type="nvarchar" MaxLength="50" />
+          <Property Name="tte_abpc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tte_uduc" Type="nvarchar" MaxLength="12" />
+          <Property Name="tte_urla" Type="nvarchar" MaxLength="255" />
+          <Property Name="tte_nxtf" Type="varchar" MaxLength="1" />
+          <Property Name="tte_nxtt" Type="nvarchar" MaxLength="25" />
+          <Property Name="tte_csrl" Type="varchar" MaxLength="1" />
+          <Property Name="tte_hlpf" Type="varchar" MaxLength="1" />
+          <Property Name="tte_appf" Type="varchar" MaxLength="1" />
+          <Property Name="tte_keep" Type="varchar" MaxLength="1" />
+          <Property Name="tte_appt" Type="nvarchar" MaxLength="255" />
+          <Property Name="tte_nxts" Type="nvarchar" MaxLength="100" />
+          <Property Name="tte_errs" Type="nvarchar" MaxLength="100" />
+          <Property Name="tte_prec" Type="nvarchar" MaxLength="100" />
+          <Property Name="tte_oths" Type="nvarchar" MaxLength="100" />
+          <Property Name="tte_relo" Type="varchar" MaxLength="1" />
+          <Property Name="tte_btip" Type="nvarchar" MaxLength="255" />
+          <Property Name="tte_ntip" Type="nvarchar" MaxLength="255" />
+          <Property Name="tte_rawm" Type="varchar" MaxLength="1" />
+          <Property Name="tte_htvc" Type="nvarchar" MaxLength="6" />
+          <Property Name="tte_tblt" Type="nvarchar(max)" />
+          <Property Name="tte_parm" Type="nvarchar(max)" />
+          <Property Name="tte_head" Type="nvarchar(max)" />
+          <Property Name="tte_help" Type="nvarchar(max)" />
+          <Property Name="tte_html" Type="nvarchar(max)" />
+          <Property Name="TTE_FOOT" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="SITSDEVModelStoreContainer">
+          <EntitySet Name="men_tec" EntityType="Self.men_tec" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="men_tkt" EntityType="Self.men_tkt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="men_tte" EntityType="Self.men_tte" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SITSDEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="men_tec">
+          <Key>
+            <PropertyRef Name="tec_tktc" />
+            <PropertyRef Name="tec_ttes" />
+            <PropertyRef Name="tec_seq2" />
+          </Key>
+          <Property Name="tec_tktc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tec_ttes" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="tec_seq2" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="tec_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tec_step" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tec_iuse" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TEC_RANK" Type="Decimal" Precision="5" Scale="0" />
+        </EntityType>
+        <EntityType Name="men_tkt">
+          <Key>
+            <PropertyRef Name="tkt_code" />
+          </Key>
+          <Property Name="tkt_code" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tkt_snam" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_iuse" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_wght" Type="Decimal" Precision="7" Scale="3" />
+          <Property Name="tkt_link" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_rpya" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_dela" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_mstc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_from" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_tref" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_actn" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_eref" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_subj" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_clup" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_stab" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_htvc" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_audf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_bart" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_mst1" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_mst2" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_cred" Type="DateTime" Precision="3" />
+          <Property Name="tkt_updd" Type="DateTime" Precision="3" />
+          <Property Name="tkt_udf1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf3" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf4" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf5" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf6" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf7" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf8" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udf9" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfa" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfb" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfc" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfd" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfe" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udff" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfg" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfh" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfi" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfj" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_udfk" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_mprd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tkt_bar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_htmo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_htmc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tkt_html" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="men_tte">
+          <Key>
+            <PropertyRef Name="tte_tktc" />
+            <PropertyRef Name="tte_seq3" />
+          </Key>
+          <Property Name="tte_tktc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tte_seq3" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="tte_rank" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="tte_step" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="tte_page" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="tte_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tte_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tte_iuse" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_ctrl" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_link" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_prbb" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_disp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_type" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="tte_slgc" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="tte_srlc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tte_conc" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="tte_cops" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="tte_pogc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tte_podc" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="tte_ttuc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tte_prac" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="tte_oper" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tte_abpc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tte_uduc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="tte_urla" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tte_nxtf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_nxtt" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="tte_csrl" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_hlpf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_appf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_keep" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_appt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tte_nxts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tte_errs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tte_prec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tte_oths" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tte_relo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_btip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tte_ntip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tte_rawm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="tte_htvc" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="tte_tblt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tte_parm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tte_head" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tte_help" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tte_html" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TTE_FOOT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="SITSDEVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="men_tec" EntityType="Self.men_tec" />
+          <EntitySet Name="men_tkt" EntityType="Self.men_tkt" />
+          <EntitySet Name="men_tte" EntityType="Self.men_tte" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SITSDEVModelStoreContainer" CdmEntityContainer="SITSDEVEntities">
+          <EntitySetMapping Name="men_tec">
+            <EntityTypeMapping TypeName="SITSDEVModel.men_tec">
+              <MappingFragment StoreEntitySet="men_tec">
+                <ScalarProperty Name="tec_tktc" ColumnName="tec_tktc" />
+                <ScalarProperty Name="tec_ttes" ColumnName="tec_ttes" />
+                <ScalarProperty Name="tec_seq2" ColumnName="tec_seq2" />
+                <ScalarProperty Name="tec_desc" ColumnName="tec_desc" />
+                <ScalarProperty Name="tec_step" ColumnName="tec_step" />
+                <ScalarProperty Name="tec_iuse" ColumnName="tec_iuse" />
+                <ScalarProperty Name="TEC_RANK" ColumnName="TEC_RANK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="men_tkt">
+            <EntityTypeMapping TypeName="SITSDEVModel.men_tkt">
+              <MappingFragment StoreEntitySet="men_tkt">
+                <ScalarProperty Name="tkt_code" ColumnName="tkt_code" />
+                <ScalarProperty Name="tkt_snam" ColumnName="tkt_snam" />
+                <ScalarProperty Name="tkt_name" ColumnName="tkt_name" />
+                <ScalarProperty Name="tkt_iuse" ColumnName="tkt_iuse" />
+                <ScalarProperty Name="tkt_wght" ColumnName="tkt_wght" />
+                <ScalarProperty Name="tkt_link" ColumnName="tkt_link" />
+                <ScalarProperty Name="tkt_rpya" ColumnName="tkt_rpya" />
+                <ScalarProperty Name="tkt_dela" ColumnName="tkt_dela" />
+                <ScalarProperty Name="tkt_mstc" ColumnName="tkt_mstc" />
+                <ScalarProperty Name="tkt_from" ColumnName="tkt_from" />
+                <ScalarProperty Name="tkt_tref" ColumnName="tkt_tref" />
+                <ScalarProperty Name="tkt_actn" ColumnName="tkt_actn" />
+                <ScalarProperty Name="tkt_eref" ColumnName="tkt_eref" />
+                <ScalarProperty Name="tkt_subj" ColumnName="tkt_subj" />
+                <ScalarProperty Name="tkt_clup" ColumnName="tkt_clup" />
+                <ScalarProperty Name="tkt_stab" ColumnName="tkt_stab" />
+                <ScalarProperty Name="tkt_htvc" ColumnName="tkt_htvc" />
+                <ScalarProperty Name="tkt_audf" ColumnName="tkt_audf" />
+                <ScalarProperty Name="tkt_bart" ColumnName="tkt_bart" />
+                <ScalarProperty Name="tkt_mst1" ColumnName="tkt_mst1" />
+                <ScalarProperty Name="tkt_mst2" ColumnName="tkt_mst2" />
+                <ScalarProperty Name="tkt_cred" ColumnName="tkt_cred" />
+                <ScalarProperty Name="tkt_updd" ColumnName="tkt_updd" />
+                <ScalarProperty Name="tkt_udf1" ColumnName="tkt_udf1" />
+                <ScalarProperty Name="tkt_udf2" ColumnName="tkt_udf2" />
+                <ScalarProperty Name="tkt_udf3" ColumnName="tkt_udf3" />
+                <ScalarProperty Name="tkt_udf4" ColumnName="tkt_udf4" />
+                <ScalarProperty Name="tkt_udf5" ColumnName="tkt_udf5" />
+                <ScalarProperty Name="tkt_udf6" ColumnName="tkt_udf6" />
+                <ScalarProperty Name="tkt_udf7" ColumnName="tkt_udf7" />
+                <ScalarProperty Name="tkt_udf8" ColumnName="tkt_udf8" />
+                <ScalarProperty Name="tkt_udf9" ColumnName="tkt_udf9" />
+                <ScalarProperty Name="tkt_udfa" ColumnName="tkt_udfa" />
+                <ScalarProperty Name="tkt_udfb" ColumnName="tkt_udfb" />
+                <ScalarProperty Name="tkt_udfc" ColumnName="tkt_udfc" />
+                <ScalarProperty Name="tkt_udfd" ColumnName="tkt_udfd" />
+                <ScalarProperty Name="tkt_udfe" ColumnName="tkt_udfe" />
+                <ScalarProperty Name="tkt_udff" ColumnName="tkt_udff" />
+                <ScalarProperty Name="tkt_udfg" ColumnName="tkt_udfg" />
+                <ScalarProperty Name="tkt_udfh" ColumnName="tkt_udfh" />
+                <ScalarProperty Name="tkt_udfi" ColumnName="tkt_udfi" />
+                <ScalarProperty Name="tkt_udfj" ColumnName="tkt_udfj" />
+                <ScalarProperty Name="tkt_udfk" ColumnName="tkt_udfk" />
+                <ScalarProperty Name="tkt_mprd" ColumnName="tkt_mprd" />
+                <ScalarProperty Name="tkt_bar" ColumnName="tkt_bar" />
+                <ScalarProperty Name="tkt_text" ColumnName="tkt_text" />
+                <ScalarProperty Name="tkt_htmo" ColumnName="tkt_htmo" />
+                <ScalarProperty Name="tkt_htmc" ColumnName="tkt_htmc" />
+                <ScalarProperty Name="tkt_html" ColumnName="tkt_html" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="men_tte">
+            <EntityTypeMapping TypeName="SITSDEVModel.men_tte">
+              <MappingFragment StoreEntitySet="men_tte">
+                <ScalarProperty Name="tte_tktc" ColumnName="tte_tktc" />
+                <ScalarProperty Name="tte_seq3" ColumnName="tte_seq3" />
+                <ScalarProperty Name="tte_rank" ColumnName="tte_rank" />
+                <ScalarProperty Name="tte_step" ColumnName="tte_step" />
+                <ScalarProperty Name="tte_page" ColumnName="tte_page" />
+                <ScalarProperty Name="tte_name" ColumnName="tte_name" />
+                <ScalarProperty Name="tte_desc" ColumnName="tte_desc" />
+                <ScalarProperty Name="tte_iuse" ColumnName="tte_iuse" />
+                <ScalarProperty Name="tte_ctrl" ColumnName="tte_ctrl" />
+                <ScalarProperty Name="tte_link" ColumnName="tte_link" />
+                <ScalarProperty Name="tte_prbb" ColumnName="tte_prbb" />
+                <ScalarProperty Name="tte_disp" ColumnName="tte_disp" />
+                <ScalarProperty Name="tte_type" ColumnName="tte_type" />
+                <ScalarProperty Name="tte_slgc" ColumnName="tte_slgc" />
+                <ScalarProperty Name="tte_srlc" ColumnName="tte_srlc" />
+                <ScalarProperty Name="tte_conc" ColumnName="tte_conc" />
+                <ScalarProperty Name="tte_cops" ColumnName="tte_cops" />
+                <ScalarProperty Name="tte_pogc" ColumnName="tte_pogc" />
+                <ScalarProperty Name="tte_podc" ColumnName="tte_podc" />
+                <ScalarProperty Name="tte_ttuc" ColumnName="tte_ttuc" />
+                <ScalarProperty Name="tte_prac" ColumnName="tte_prac" />
+                <ScalarProperty Name="tte_oper" ColumnName="tte_oper" />
+                <ScalarProperty Name="tte_abpc" ColumnName="tte_abpc" />
+                <ScalarProperty Name="tte_uduc" ColumnName="tte_uduc" />
+                <ScalarProperty Name="tte_urla" ColumnName="tte_urla" />
+                <ScalarProperty Name="tte_nxtf" ColumnName="tte_nxtf" />
+                <ScalarProperty Name="tte_nxtt" ColumnName="tte_nxtt" />
+                <ScalarProperty Name="tte_csrl" ColumnName="tte_csrl" />
+                <ScalarProperty Name="tte_hlpf" ColumnName="tte_hlpf" />
+                <ScalarProperty Name="tte_appf" ColumnName="tte_appf" />
+                <ScalarProperty Name="tte_keep" ColumnName="tte_keep" />
+                <ScalarProperty Name="tte_appt" ColumnName="tte_appt" />
+                <ScalarProperty Name="tte_nxts" ColumnName="tte_nxts" />
+                <ScalarProperty Name="tte_errs" ColumnName="tte_errs" />
+                <ScalarProperty Name="tte_prec" ColumnName="tte_prec" />
+                <ScalarProperty Name="tte_oths" ColumnName="tte_oths" />
+                <ScalarProperty Name="tte_relo" ColumnName="tte_relo" />
+                <ScalarProperty Name="tte_btip" ColumnName="tte_btip" />
+                <ScalarProperty Name="tte_ntip" ColumnName="tte_ntip" />
+                <ScalarProperty Name="tte_rawm" ColumnName="tte_rawm" />
+                <ScalarProperty Name="tte_htvc" ColumnName="tte_htvc" />
+                <ScalarProperty Name="tte_tblt" ColumnName="tte_tblt" />
+                <ScalarProperty Name="tte_parm" ColumnName="tte_parm" />
+                <ScalarProperty Name="tte_head" ColumnName="tte_head" />
+                <ScalarProperty Name="tte_help" ColumnName="tte_help" />
+                <ScalarProperty Name="tte_html" ColumnName="tte_html" />
+                <ScalarProperty Name="TTE_FOOT" ColumnName="TTE_FOOT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
